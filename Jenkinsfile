@@ -5,6 +5,7 @@ pipeline {
     stages{
         stage('Deploy') {
             steps {
+                bat "pulumi up --yes"
                 bat "cdk deploy --require-approval=never"
             }
         }
