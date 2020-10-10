@@ -1,3 +1,5 @@
+def awsCredentials = [[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'AWS_Credentials']]
+
 pipeline {
     agent any
     stages{
