@@ -5,13 +5,13 @@ pipeline {
     stages{
         stage('Deploy') {
             steps {
-                bat 'cdk deploy --require-approval=never'
+                bat "cdk deploy --require-approval=never"
             }
         }
 
         stage('Destroy') {
             steps {
-                bat 'cdk destroy --require-approval=never'
+                bat "cdk destroy --require-approval=never"
             }
         } 
     }
