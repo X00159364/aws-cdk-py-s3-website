@@ -5,6 +5,7 @@ pipeline {
     stages{
         stage('Deploy') {
             steps {
+                bat "cdk --version"
                 bat "cdk deploy --require-approval=never"
             }
         }
