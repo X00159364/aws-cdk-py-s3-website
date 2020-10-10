@@ -5,6 +5,7 @@ pipeline {
     stages{
         stage('Deploy') {
             steps {
+                bat'npm install -g aws-cdk'
                 bat 'cdk deploy --require-approval=never'
             }
         }
