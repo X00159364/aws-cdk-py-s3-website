@@ -5,7 +5,7 @@ pipeline {
     stages{
         stage('Deploy') {
             steps {
-                bat "cdk --version"
+                bat "cdk bootstrap aws://592715633892/eu-west-1"
                 bat "cdk deploy --require-approval=never"
             }
         }
