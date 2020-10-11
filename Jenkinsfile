@@ -4,8 +4,7 @@ pipeline {
     agent any
     stages{
         stage('Deploy') {
-            steps {
-                bat "cdk bootstrap aws://592715633892/eu-west-1"
+            steps {                
                 bat "cdk deploy --require-approval=never"
             }
         }
